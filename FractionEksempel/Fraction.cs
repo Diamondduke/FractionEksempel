@@ -16,7 +16,7 @@ namespace FractionEksempel
         #endregion
 
         #region Constructors
-        public Fraction(int numenator, int denominator) 
+        public Fraction(int numenator = 0, int denominator = 1) 
         {
             Numenator = numenator;
             Denominator = denominator;
@@ -29,6 +29,15 @@ namespace FractionEksempel
         {
             int numerator = (Numenator * other.Denominator) + (Denominator * other.Numenator);
             int denominator = Denominator * other.Denominator;
+
+            Fraction sum = new(numerator, denominator);
+            return sum;
+        }
+
+        public Fraction Multiplication(Fraction other) 
+        {
+            int numerator = (Numenator * other.Numenator);
+            int denominator = (Denominator * other.Denominator);
 
             Fraction sum = new(numerator, denominator);
             return sum;
