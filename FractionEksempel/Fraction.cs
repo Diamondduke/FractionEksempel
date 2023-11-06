@@ -60,6 +60,42 @@ namespace FractionEksempel
             return sum;
         }
 
+        public bool Equals(Fraction value)
+        {
+            Fraction other = new(Numenator, Denominator);
+
+            if (Numenator == other.Numenator && Denominator == other.Denominator)
+            {
+                Console.WriteLine("True");
+                return true;
+            }
+
+            else
+            {
+                Console.WriteLine("False");
+                return false;
+            }
+            
+        }
+
+        public bool GreaterThan(Fraction value)
+        {
+            //Fraction other = new(Numenator, Denominator);
+
+            if ((Numenator / Denominator) > (value.Numenator / value.Denominator))
+            {
+                Console.WriteLine("True. Greater then");
+                return true;
+            }
+
+            else
+            {
+                Console.WriteLine("False. Not greater than");
+                return false;
+            }
+
+        }
+
         //static variant
 
         public static Fraction Add(Fraction left, Fraction right)

@@ -25,6 +25,11 @@
             Fraction divide = oneHalf.Division(oneThird);
             Console.WriteLine(divide.ToText());
 
+            Fraction equal = new(1,2);
+            equal.Equals(oneHalf);
+
+            Fraction greaterThan = new(1, 1);
+            greaterThan.GreaterThan(oneHalf);
         }
     }
 }
