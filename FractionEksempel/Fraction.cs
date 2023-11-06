@@ -60,9 +60,9 @@ namespace FractionEksempel
             return sum;
         }
 
-        public bool Equals(Fraction value)
+        public bool Equals(Fraction other)
         {
-            Fraction other = new(Numenator, Denominator);
+            //Fraction other = new(Numenator, Denominator);
 
             if (Numenator == other.Numenator && Denominator == other.Denominator)
             {
