@@ -4,17 +4,20 @@
     {
         static void Main(string[] args)
         {
-            Fraction oneHalef = new(1,2);
+            Fraction oneHalf = new(1,2);
             Fraction oneThird = new(1,3);
 
-            Fraction sum = oneHalef.Add(oneThird);
+            Fraction sum = oneHalf.Add(oneThird);
             Console.WriteLine(sum);
 
-            Fraction sumNonstaticMethod = oneHalef.Add(oneThird);
+            Fraction sumNonstaticMethod = oneHalf.Add(oneThird);
             Console.WriteLine(sumNonstaticMethod.ToText());
 
-            Fraction sumStaticMethod = oneHalef.Add(oneThird);
+            Fraction sumStaticMethod = oneHalf.Add(oneThird);
             Console.WriteLine(sumNonstaticMethod.ToText());
+
+            Fraction multiply = oneHalf.Multiplication(oneThird);
+            Console.WriteLine(multiply.ToText());
         }
     }
 }

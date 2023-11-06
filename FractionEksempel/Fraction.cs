@@ -33,6 +33,14 @@ namespace FractionEksempel
             Fraction sum = new(numerator, denominator);
             return sum;
         }
+        public Fraction Substraction(Fraction other)
+        {
+            int numerator = (Numenator * other.Denominator) - (Denominator * other.Numenator);
+            int denominator = Denominator * other.Denominator;
+
+            Fraction sum = new(numerator, denominator);
+            return sum;
+        }
 
         public Fraction Multiplication(Fraction other) 
         {
@@ -42,6 +50,8 @@ namespace FractionEksempel
             Fraction sum = new(numerator, denominator);
             return sum;
         }
+
+        public Fraction 
         //static variant
 
         public static Fraction Add(Fraction left, Fraction right)
