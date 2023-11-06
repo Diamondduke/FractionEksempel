@@ -51,7 +51,15 @@ namespace FractionEksempel
             return sum;
         }
 
-        public Fraction 
+        public Fraction Division(Fraction other) 
+        {
+            int numerator = (Numenator * other.Denominator);
+            int denominator = (Denominator * other.Numenator);
+
+            Fraction sum = new(numerator, denominator);
+            return sum;
+        }
+
         //static variant
 
         public static Fraction Add(Fraction left, Fraction right)
@@ -65,7 +73,7 @@ namespace FractionEksempel
 
         public string ToText()
         {
-            return $"{Numenator}{Denominator}";
+            return $"{Numenator}/{Denominator}";
         }
         #endregion Public Methods
     }

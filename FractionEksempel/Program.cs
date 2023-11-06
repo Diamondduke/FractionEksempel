@@ -14,10 +14,17 @@
             Console.WriteLine(sumNonstaticMethod.ToText());
 
             Fraction sumStaticMethod = oneHalf.Add(oneThird);
-            Console.WriteLine(sumNonstaticMethod.ToText());
+            Console.WriteLine(sumStaticMethod.ToText());
+
+            Fraction substraction = oneHalf.Substraction(oneThird);
+            Console.WriteLine(substraction.ToText());
 
             Fraction multiply = oneHalf.Multiplication(oneThird);
             Console.WriteLine(multiply.ToText());
+
+            Fraction divide = oneHalf.Division(oneThird);
+            Console.WriteLine(divide.ToText());
+
         }
     }
 }
