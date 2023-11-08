@@ -63,6 +63,7 @@ namespace FractionEksempel
         public bool Equals(Fraction other)
         {
             //Fraction other = new(Numenator, Denominator);
+            //((double)Numerator/Denominator == ((double)other.Numenator/other.Denominator)// Dette er det som kalles casting.
 
             if (Numenator == other.Numenator && Denominator == other.Denominator)
             {
@@ -109,7 +110,7 @@ namespace FractionEksempel
 
         public string ToText()
         {
-            return $"{Numenator}/{Denominator}";
+            return $"{Numenator} / {Denominator}";
         }
         #endregion Public Methods
     }

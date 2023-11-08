@@ -4,8 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Fraction oneHalf = new(1,2);
-            Fraction oneThird = new(1,3);
+            Fraction oneHalf = new Fraction(); //Vi setter denne utenfor try blokken, sånn at den har en levetid gjennom hele programmet, ikke bare i blokken.
+            Fraction oneThird = new Fraction();
+
+            try
+            {
+                oneHalf = new(1, 2);
+                oneThird = new(1, 3);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
 
             Fraction sum = oneHalf.Add(oneThird);
             Console.WriteLine(sum);
@@ -25,7 +35,7 @@
             Fraction divide = oneHalf.Division(oneThird);
             Console.WriteLine(divide.ToText());
 
-            Fraction equal = new(1,2);
+            Fraction equal = new(1,3);
             equal.Equals(oneThird);
 
             Fraction greaterThan = new(1, 1);
