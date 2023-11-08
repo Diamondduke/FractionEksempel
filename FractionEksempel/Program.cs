@@ -28,8 +28,11 @@
             Fraction sumStaticMethod = oneHalf.Add(oneThird);
             Console.WriteLine(sumStaticMethod.ToString());
 
-            Fraction sumOverloadOperator = oneHalf + oneThird; //Her bruker vi overload
-            Console.WriteLine(sumOverloadOperator.ToString());
+            Fraction sumOverloadAdd = oneHalf + oneThird; //Her bruker vi overload
+            Console.WriteLine($"{sumOverloadAdd.ToString()} Dette overload Add");
+
+            Fraction sumOverloadSubstration = oneHalf - testFraction; //Her bruker vi overload
+            Console.WriteLine($"{sumOverloadSubstration.ToString()} Dette overload Substraction");
 
             Fraction sumTest = oneHalf.Add(testFraction);
             Console.WriteLine(sumStaticMethod.ToString());

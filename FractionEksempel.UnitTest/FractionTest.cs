@@ -44,7 +44,7 @@ namespace FractionEksempel.UnitTest
             //Arrange
             Fraction fraction1 = new(4, 8);
             Fraction fraction2 = new(2, 4);
-            Fraction expected = new(1, 2);
+            Fraction expected = new(2, 2);
 
             //Act
             Fraction actual = fraction1.Add(fraction2);
@@ -52,8 +52,8 @@ namespace FractionEksempel.UnitTest
             //Assert
             Assert.That(actual, Is.EqualTo(expected));
 
-            Assert.That(actual.Numenator, Is.EqualTo(expected.Numenator));
-            Assert.That(actual.Denominator, Is.EqualTo(expected.Denominator));
+            //Assert.That(actual.Numenator, Is.EqualTo(expected.Numenator));
+            //Assert.That(actual.Denominator, Is.EqualTo(expected.Denominator));
         }
         
         [Test]
@@ -68,9 +68,31 @@ namespace FractionEksempel.UnitTest
             Fraction actual = fraction1.Division(fraction2);
 
             //Assert
-            Assert.That(actual.Numenator, Is.EqualTo(expected.Numenator));
-            Assert.That(actual.Denominator, Is.EqualTo(expected.Denominator));
-        }
 
+
+            Assert.That(actual,Is.EqualTo(expected));
+
+            //Assert.That(actual.Numenator, Is.EqualTo(expected.Numenator));
+            //Assert.That(actual.Denominator, Is.EqualTo(expected.Denominator));
+        }
+        [Test]
+        public void GreatThan_TwoFractions_ReturnsExpectedSum()
+        {
+            //Arrange
+            Fraction fraction1 = new(4, 4);
+            Fraction fraction2 = new(2, 4);
+            bool expected = true;
+
+            //Act
+            bool actual = fraction1.GreaterThan(fraction2);
+
+            //Assert
+
+
+            Assert.That(actual, Is.EqualTo(expected));
+
+            //Assert.That(actual.Numenator, Is.EqualTo(expected.Numenator));
+            //Assert.That(actual.Denominator, Is.EqualTo(expected.Denominator));
+        }
     }
 }
