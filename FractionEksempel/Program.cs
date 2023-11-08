@@ -28,6 +28,9 @@
             Fraction sumStaticMethod = oneHalf.Add(oneThird);
             Console.WriteLine(sumStaticMethod.ToString());
 
+            Fraction sumOverloadOperator = oneHalf + oneThird; //Her bruker vi overload
+            Console.WriteLine(sumOverloadOperator.ToString());
+
             Fraction sumTest = oneHalf.Add(testFraction);
             Console.WriteLine(sumStaticMethod.ToString());
 

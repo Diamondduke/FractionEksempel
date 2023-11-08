@@ -35,6 +35,12 @@ namespace FractionEksempel
             Fraction sum = new(numerator, denominator);
             return sum;
         }
+
+        //public Fraction Add(Fraction other) // Alternativ måte å gjøre det på.
+        //{
+        //    Fraction.Add(this, other);
+              
+        //}
         public Fraction Substraction(Fraction other)
         {
             int numerator = (Numenator * other.Denominator) - (Denominator * other.Numenator);
@@ -152,5 +158,19 @@ namespace FractionEksempel
         }
 
         #endregion Public Methods
+
+        #region Operator Overloads
+        public static Fraction operator +(Fraction left, Fraction right)
+        {
+            return left.Add(right);
+            //return Fraction.Add(left, right);
+        }
+
+        public static Fraction operator -(Fraction left, Fraction right) 
+        {
+            return left.Substraction(right);
+        }
+
+        #endregion Operator Overloads
     }
 }
