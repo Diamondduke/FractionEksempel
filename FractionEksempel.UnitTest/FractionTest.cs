@@ -38,5 +38,21 @@ namespace FractionEksempel.UnitTest
             Assert.That(actual.Numenator, Is.EqualTo(expected.Numenator));
             Assert.That(actual.Denominator, Is.EqualTo(expected.Denominator));
         }
+        [Test]
+        public void Equals_TwoFractions_ReturnsExpectedSum()
+        {
+            //Arrange
+            Fraction fraction1 = new(1, 4);
+            Fraction fraction2 = new(2, 4);
+            Fraction expected = new(2, 16);
+
+            //Act
+            Fraction actual = fraction1.Equals(fraction2);
+
+            //Assert
+            Assert.That(actual.Numenator, Is.EqualTo(expected.Numenator));
+            Assert.That(actual.Denominator, Is.EqualTo(expected.Denominator));
+        }
+
     }
 }

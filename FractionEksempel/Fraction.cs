@@ -20,6 +20,8 @@ namespace FractionEksempel
         {
             Numenator = numenator;
             Denominator = denominator;
+
+            Reduce();
         }
         #endregion Constructors
 
@@ -136,29 +138,18 @@ namespace FractionEksempel
         }
 
         //public Fraction Reduce(int numenator, int denominator)
-        //public Fraction Reduce(Fraction other)
-        //{
-        //    Fraction reducedFraction = new(); 
-        //    for (int i = 0; i < other.Numenator; i++)
-        //    {
-        //        if (other.Numenator % 2 == 0)
-        //        {
-        //            reducedFraction = other.Numenator;
-        //        }
-        //    }
-        //    for (int i = 0; i < other.Denominator; i++)
-        //    {
-        //        if (other.Denominator % 2 == 0)
-        //        {
-        //            return reducedFraction.Denominator;
-        //        }
-        //    }
-
-        //    return reducedFraction;
-
-        //}
-
-
+        public void Reduce()
+        {
+            for (int i = 2; i < Denominator; i++)
+            {
+                if (Numenator % i == 0 && Denominator % i == 0)
+                {
+                    Numenator /= i;
+                    Denominator /= i;
+                    i = 1; //so i = 2 when the loop starts again
+                }
+            }
+        }
 
         #endregion Public Methods
     }

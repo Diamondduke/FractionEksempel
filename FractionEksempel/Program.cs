@@ -6,11 +6,13 @@
         {
             Fraction oneHalf = new Fraction(); //Vi setter denne utenfor try blokken, sånn at den har en levetid gjennom hele programmet, ikke bare i blokken.
             Fraction oneThird = new Fraction();
+            Fraction testFraction = new Fraction();
 
             try
             {
                 oneHalf = new(1, 2);
                 oneThird = new(1, 3);
+                testFraction = new(4, 8);
             }
             catch (Exception ex)
             {
@@ -24,6 +26,9 @@
             Console.WriteLine(sumNonstaticMethod.ToString());
 
             Fraction sumStaticMethod = oneHalf.Add(oneThird);
+            Console.WriteLine(sumStaticMethod.ToString());
+
+            Fraction sumTest = oneHalf.Add(testFraction);
             Console.WriteLine(sumStaticMethod.ToString());
 
             Fraction substraction = oneHalf.Substraction(oneThird);
