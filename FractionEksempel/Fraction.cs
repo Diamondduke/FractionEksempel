@@ -174,6 +174,10 @@ namespace FractionEksempel
         {
             return left.Division(right);
         }
+        public static Fraction operator *(Fraction left, Fraction right)
+        {
+            return left.Multiplication(right);
+        }
 
         #endregion Operator Overloads
     }
