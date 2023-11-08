@@ -10,6 +10,7 @@ namespace FractionEksempel.UnitTest
         [Test]
         public void Test1()
         {
+            Fraction fraction = new();
             Assert.Pass();
         }
     }
