@@ -143,7 +143,7 @@ namespace FractionEksempel
             return $"{Numenator} / {Denominator}";
         }
 
-        //public Fraction Reduce(int numenator, int denominator)
+        //public Fraction Reduce(int numenator, int denominator), denne endte jeg opp med å ikke bruke
         public void Reduce()
         {
             for (int i = 2; i < Denominator; i++)
@@ -169,6 +169,10 @@ namespace FractionEksempel
         public static Fraction operator -(Fraction left, Fraction right) 
         {
             return left.Substraction(right);
+        }
+        public static Fraction operator /(Fraction left, Fraction right)
+        {
+            return left.Division(right);
         }
 
         #endregion Operator Overloads

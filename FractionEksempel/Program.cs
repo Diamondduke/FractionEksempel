@@ -34,6 +34,9 @@
             Fraction sumOverloadSubstration = oneHalf - testFraction; //Her bruker vi overload
             Console.WriteLine($"{sumOverloadSubstration.ToString()} Dette overload Substraction");
 
+            Fraction sumOverloadDivision = oneHalf - testFraction; //Her bruker vi overload
+            Console.WriteLine($"{sumOverloadDivision.ToString()} Dette overload Division");
+
             Fraction sumTest = oneHalf.Add(testFraction);
             Console.WriteLine(sumStaticMethod.ToString());
 
