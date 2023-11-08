@@ -108,7 +108,12 @@ namespace FractionEksempel
             return sum;
         }
 
-        public string ToText()
+        //public string ToText()
+        //{
+        //    return $"{Numenator} / {Denominator}";
+        //}
+
+        public override ToString()
         {
             return $"{Numenator} / {Denominator}";
         }
