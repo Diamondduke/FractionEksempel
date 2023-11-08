@@ -21,19 +21,19 @@
             Console.WriteLine(sum);
 
             Fraction sumNonstaticMethod = oneHalf.Add(oneThird);
-            Console.WriteLine(sumNonstaticMethod.ToText());
+            Console.WriteLine(sumNonstaticMethod.ToString());
 
             Fraction sumStaticMethod = oneHalf.Add(oneThird);
-            Console.WriteLine(sumStaticMethod.ToText());
+            Console.WriteLine(sumStaticMethod.ToString());
 
             Fraction substraction = oneHalf.Substraction(oneThird);
-            Console.WriteLine(substraction.ToText());
+            Console.WriteLine(substraction.ToString());
 
             Fraction multiply = oneHalf.Multiplication(oneThird);
-            Console.WriteLine(multiply.ToText());
+            Console.WriteLine(multiply.ToString());
 
             Fraction divide = oneHalf.Division(oneThird);
-            Console.WriteLine(divide.ToText());
+            Console.WriteLine(divide.ToString());
 
             Fraction equal = new(1,3);
             equal.Equals(oneThird);

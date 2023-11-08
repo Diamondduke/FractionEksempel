@@ -10,8 +10,8 @@ namespace FractionEksempel
     public class Fraction
     {
         #region Fields & propterties
-        int Numenator {  get; set; }
-        int Denominator {  get; set; }
+        public int Numenator {  get; set; }
+        public int Denominator {  get; set; }
 
         #endregion
 
@@ -60,24 +60,24 @@ namespace FractionEksempel
             return sum;
         }
 
-        public bool Equals(Fraction other)
-        {
-            //Fraction other = new(Numenator, Denominator);
-            //((double)Numerator/Denominator == ((double)other.Numenator/other.Denominator)// Dette er det som kalles casting.
+        //public bool Equals(Fraction other)
+        //{
+        //    //Fraction other = new(Numenator, Denominator);
+        //    //((double)Numerator/Denominator == ((double)other.Numenator/other.Denominator)// Dette er det som kalles casting.
 
-            if (Numenator == other.Numenator && Denominator == other.Denominator)
-            {
-                Console.WriteLine("True");
-                return true;
-            }
+        //    if (Numenator == other.Numenator && Denominator == other.Denominator)
+        //    {
+        //        Console.WriteLine("True");
+        //        return true;
+        //    }
 
-            else
-            {
-                Console.WriteLine("False");
-                return false;
-            }
+        //    else
+        //    {
+        //        Console.WriteLine("False");
+        //        return false;
+        //    }
             
-        }
+        //}
 
         public bool GreaterThan(Fraction value)
         {
@@ -113,10 +113,53 @@ namespace FractionEksempel
         //    return $"{Numenator} / {Denominator}";
         //}
 
-        public override ToString()
+        public bool Equals(Fraction other)
+        {
+            return (Numenator * other.Denominator) == (other.Numenator * Denominator);
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Fraction other)
+            {
+                return Equals(other);
+            }
+            else 
+            { 
+                return false;
+            }
+        }
+
+        public override string ToString()
         {
             return $"{Numenator} / {Denominator}";
         }
+
+        //public Fraction Reduce(int numenator, int denominator)
+        //public Fraction Reduce(Fraction other)
+        //{
+        //    Fraction reducedFraction = new(); 
+        //    for (int i = 0; i < other.Numenator; i++)
+        //    {
+        //        if (other.Numenator % 2 == 0)
+        //        {
+        //            reducedFraction = other.Numenator;
+        //        }
+        //    }
+        //    for (int i = 0; i < other.Denominator; i++)
+        //    {
+        //        if (other.Denominator % 2 == 0)
+        //        {
+        //            return reducedFraction.Denominator;
+        //        }
+        //    }
+
+        //    return reducedFraction;
+
+        //}
+
+
+
         #endregion Public Methods
     }
 }
